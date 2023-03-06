@@ -1,0 +1,209 @@
+/*CREANDO LAS TARJETAS-----------------------------------------------------------------------*/
+
+/*TARJETAS GIRATORIAS------------------------------------------------------------------------*/
+h4 {
+    text-align: center;
+    background-color: #050000;
+    color: rgb(233, 185, 28);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 40px;
+}
+
+.Titulo-Lenguajes {
+    text-align: center;
+    background-color: #3f0e2c;
+    color: White;
+    font-size: 35px;
+}
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(5, 24, 41); 
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    margin: 50px;   
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s linear;
+}
+
+.front {
+    padding-top: 20px;
+    transform: perspective(600px) rotate(0deg);
+    box-shadow: 0 5px 10px black;
+    text-align: center;
+    background: linear-gradient(to top, #ad1a1a, #e7a10b, #e68d18);
+}
+
+.back {
+    transform: perspective(600px) rotateY(180deg);
+    background: linear-gradient(to top, #e6d70e, #d8b874, #ddcb24);
+    padding-top: 20px;
+    color: black;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(75, 84, 211, 0.774);
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/*IMAGEN Y TEXTO DE LAS TARJETAS*/
+
+.imagen-internet {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 250px;
+    height: 190px;
+    border-radius: 25px;
+  
+}
+
+.face p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 45px;
+    margin-right: 45px;
+    font-size: 70%;
+}
+
+.card h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 175%;
+}
+
+.card h2 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 140%;
+}
+.card h3 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 140%;
+}
+
+/*TARJETAS QUE SE TRASLADAN RECETARIO------------------------------------------------------------------------*/
+.Recetario{
+    background-color: rgb(190, 77, 12) ;
+}
+
+.card {
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    align-items:center;
+    margin-left: 150px;
+    margin-right: 150px;;
+}
+
+.card .card_landing {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 10px #000;
+    background: linear-gradient(transparent 80%, #000), var(--i);
+    background-position: center;
+    background-size: cover;
+    z-index: 100;
+}
+
+.card .card_landing h6 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.card .card_info {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    padding: 15px;
+    background: #fff;
+    z-index: 90;
+    box-shadow: 0 5px 10px #000;
+    transition: .5s;
+}
+
+.card:hover .card_info {
+    left: 100%;
+}
+
+.card_info .head {
+    padding: 5px 0;
+    border-bottom: solid 1px #bc8811;
+}
+
+.card_info .head .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #bc8811;
+}
+
+.card_info .head .description {
+    display: flex;
+    gap: 10px;
+}
+
+.card_info .head .description .item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.card_info .head .description .item i {
+    color: #bc8811;
+    font-size: 15px;
+}
+
+.card_info .head .description .item p {
+    font-size: 13px;
+}
+
+.card_info .content {
+    margin-top: 15px;
+}
+
+.card_info .content .list {
+    padding: 10px 15px;
+}
+
+.card_info .content .list li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card_info .action .btn {
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background: #bc8811;
+    display: block;
+    margin-top: 10px;
+}
